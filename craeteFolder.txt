@@ -1,0 +1,14 @@
+_createFolder() async {
+    Directory root =await getApplicationDocumentsDirectory(); // this is using path_provider
+    final folderName = "some_name";
+    final path = Directory(root.path + "/ammar");
+    if ((await path.exists())) {
+      // TODO:
+      print("exist");
+      print(path);
+    } else {
+      // TODO:
+      print("not exist");
+      path.create();
+    }
+  }
